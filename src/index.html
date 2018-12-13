@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style type="text/css">
+    body {
+      background-color: #f6f5ef !important
+    }
+
+    .logo {
+      height: 46px;
+      width: 46px;
+    }
+
+    .orange {
+      color: dimgray;
+      background-color: #ff732b;
+      font-family: "Verdana, Geneva, sans-serif";
+    }
+
+    .dimgray {
+      color: dimgray;
+      font-family: "Verdana, Geneva, sans-serif";
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+    }
+
+    .dimgray-small {
+      color: dimgray;
+      font-family: "Verdana, Geneva, sans-serif";
+      font-size: 11px;
+    }
+
+    .footer {
+      position: fixed;
+      bottom: 0px;
+      width: 100%;
+      height: 60px;
+      background-color: #ff732b;
+      color: white;
+      padding-top: 20px;
+    }
+  </style>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hacker News Search</title>
+
+  <script defer src="/__/firebase/5.7.0/firebase-app.js"></script>
+  <script defer src="/__/firebase/init.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+    crossorigin="anonymous">
+
+</head>
+
+<body onload="onLoad(this)">
+  <header>
+    <nav class="navbar orange">
+      <div class="container" style="height: 60px; float: left">
+        <form class="navbar-form">
+          <div class="form-group">
+            <div class="row">
+              <div class="col-sm-1">
+                <p><a href="https://hackernewssearch.firebaseapp.com/">
+                    <img class="logo" src="/assets/logo-hn-search.png" alt="Hacker News Logo">
+                  </a>
+                </p>
+              </div>
+              <div class="col-sm-11">
+                <input type="text" class="col-md-8 form-control" style="width: 400px; height: 45px; font-size: 16px;
+              font-family: Verdana, Geneva, sans-serif; margin-left: 10px; background-color: f6f5ef"
+                  ; placeholder="Search Hacker News Stories by Title" oninput="onSearchInput(this)">
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container" style="margin-left: 70px">
+    <div class="list-group">
+    </div>
+  </div>
+
+  <div class="container" style="margin-left: 70px; margin-bottom: 70px">
+    <nav aria-label="Page navigation">
+      <ul class="pagination pagination-lg">
+        <li>
+          <a href="#" aria-label="Previous" style="color: white; background-color: #ff732b; font-size: 16px; font-family: Verdana, Geneva, sans-serif;"
+            id="previousButton" onclick="onClickPreviousPage()" hidden>
+            <span aria-hidden="true">&laquo;</span>
+          </a>
+        </li>
+        <li>
+          <a id="currentPage" style="color: white; background-color: #ff732b; display: none; font-size: 16px; font-family: Verdana, Geneva, sans-serif;"></a>
+        </li>
+        <li>
+          <a href="#" aria-label="Next" style="color: white; background-color: #ff732b; font-size: 16px; font-family: Verdana, Geneva, sans-serif;"
+            id="nextButton" onclick="onClickNextPage()" hidden>
+            <span aria-hidden="true">&raquo;</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <footer class="footer orange">
+    <div class="container" style="display: inline-block; padding-left: 85px; font-size: 14px; font-family: Verdana, Geneva, sans-serif;">
+      <a href="https://news.ycombinator.com/" target="_blank" style="color: white">Hacker News</a>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+  crossorigin="anonymous"></script>
+
+</html>
