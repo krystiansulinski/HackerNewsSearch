@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "HackerNewsSearch": "hackernewssearch",
+    "default": "hackernewssearch"
+  }
+}
