@@ -1,4 +1,4 @@
-## Hacker News Search Client
+## Instructions - Hacker News Search Client
 
 **Hacker News** (<https://news.ycombinator.com/>) is a great site run by the famous venture capital firm Y Combinator. It allows people to submit articles and comment on them. It also provides a nice web interface to search through its history or articles. 
 
@@ -13,3 +13,6 @@ The results are returned in a paged format, provide buttons to navigate forward 
 
 Note that your UI doesn’t have to look exactly like the above, any style is up to your implementation. 
 You may choose to use any Javascript and CSS framework you like to implement this app. It is acceptable to use a specific framework’s tooling to bootstrap the application build tooling. 
+
+## Solution
+The website can be seen here: <https://hackernewssearch.firebaseapp.com/>
